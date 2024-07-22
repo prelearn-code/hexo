@@ -1,0 +1,5 @@
+npm install  hexo-cli
+
+npm install hexo-server --save
+
+npm install hexo-deployer-git
