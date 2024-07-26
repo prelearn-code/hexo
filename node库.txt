@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 npm install  hexo-cli
 
 npm install hexo-server --save
 
+=======
+npm install  hexo-cli
+
+npm install hexo-server --save
+
+>>>>>>> 429170276b02d1d81899ee45fd3fa74dfa0c0759
 npm install hexo-deployer-git
