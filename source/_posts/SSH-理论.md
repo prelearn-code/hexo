@@ -1,8 +1,11 @@
 ---
 title: SSH-理论
 date: 2024-07-22 16:20:19
-tags: SSH
-categories: 网络协议
+tags: 
+- SSH
+categories: 
+- 网络协议
+- SSH
 ---
 
 

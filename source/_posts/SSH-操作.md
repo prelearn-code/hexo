@@ -3,9 +3,9 @@ title: SSH-操作
 date: 2024-07-22 16:20:41
 tags: 
  - SSH
- - operate
 categories:
  - 网络协议
+ - SSH
 ---
 
 
