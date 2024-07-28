@@ -10,3 +10,13 @@ npm install hexo-server --save
 
 >>>>>>> 429170276b02d1d81899ee45fd3fa74dfa0c0759
 npm install hexo-deployer-git
+
+fatal: in unpopulated submodule '.deploy_git'
+FATAL Something's wrong. Maybe you can find the solution here: https://hexo.io/docs/troubleshooting.html
+Error: Spawn failed
+    at ChildProcess.<anonymous> (D:\repositories\hexo\node_modules\hexo-deployer-git\node_modules\hexo-util\lib\spawn.js:51:21)
+    at ChildProcess.emit (node:events:519:28)
+    at cp.emit (D:\repositories\hexo\node_modules\cross-spawn\lib\enoent.js:34:29)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+rm -rf .deploy_git
+hexo g -d
