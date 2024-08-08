@@ -42,7 +42,7 @@ categories:
 
 ## 1.区块信息
 
-![](hexo/source/_posts/BlockChain/BTC/pic/Pasted%20image%2020240807150054.png)
+![](./pic/Pasted%20image%2020240807150054.png)
 
 - 855743：区块高度即为当前区块在公链中的第几个。
 - 时间：区块产生的时间。
@@ -59,7 +59,7 @@ categories:
 
 ### a.铸币交易
 
-![](hexo/source/_posts/BlockChain/BTC/pic/Pasted%20image%2020240807151207.png)
+![](./pic/Pasted%20image%2020240807151207.png)
 
 
 - coinbase：可以随意写。
@@ -69,7 +69,7 @@ categories:
 - 本次交易没有交易费用。
 ### b.普通交易
 
-![](hexo/source/_posts/BlockChain/BTC/pic/Pasted%20image%2020240807151713.png)
+![](./pic/Pasted%20image%2020240807151713.png)
 
 - wintness：签名+公钥地址。
 - nSequence：交易的唯一标志，防止重放攻击。
@@ -146,7 +146,7 @@ categories:
 ## 2.交易进行原理
 
 说明：比特币也是基于交易的状态机，在每个全节点都会有一个UTXO集合，即为未花费交易的输出。交易主要是通过对于指定账户进行转账，其中有锁定脚本，每次使用比特币消费，都必须进行脚本的验证，并且指定比特币的来源，脚本验证通过才可以进行花费，一般脚本都是要进行身份验证，以获取合法的权限进行交易。
- ![](hexo/source/_posts/BlockChain/BTC/pic/Pasted%20image%2020240807151713.png)
+ ![](./pic/Pasted%20image%2020240807151713.png)
 
 - 其中的类型即为交易脚本类型。
 - 脚本公钥为，下次交易的公钥，即为输出值地址的公钥,可通过公钥的哈希值，计算出账户。
@@ -194,7 +194,7 @@ categories:
 
 #### 普通的多重签名
 
-![](hexo/source/_posts/BlockChain/BTC/pic/Pasted%20image%2020240722231809.png)
+![](./pic/Pasted%20image%2020240722231809.png)
 
 - 其中的红色叉子是脚本的逻辑问题，最终会多弹出一个数值。
 
@@ -216,7 +216,7 @@ categories:
 
 ### f.Proof of Burn
 
-![](hexo/source/_posts/BlockChain/BTC/pic/Pasted%20image%2020240722233216.png)
+![](./pic/Pasted%20image%2020240722233216.png)
 
 - return之后的代码都不会进行存储。
 -  用来销毁比特币，这个币永远不能正确验证。
