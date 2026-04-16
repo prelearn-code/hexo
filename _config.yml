@@ -6,7 +6,7 @@
 title: prelearn-code
 subtitle: ''
 description: 'prelearn-blog'
-keywords:
+keywords: 区块链, 转行, 编程, 网络协议, 小说, BlockChain, Ethereum, Bitcoin
 author: prelearn
 language: zh-CN
 timezone: 'Asia/Shanghai'
@@ -14,7 +14,7 @@ timezone: 'Asia/Shanghai'
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://prelearn-code.github.io
-permalink: :year/:month/:day/:title/
+permalink: :category/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -73,7 +73,7 @@ tag_map:
 
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
-meta_generator: true
+meta_generator: false
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
@@ -104,5 +104,23 @@ theme: fluid     ## butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: 'git'
-  repo: https://github.com/prelearn-code/prelearn-code.github.io
+  repo: git@github.com:prelearn-code/prelearn-code.github.io.git
   branch: main
+
+# Optimization (hexo-neat)
+neat_enable: true
+neat_html:
+  enable: true
+  exclude:
+neat_css:
+  enable: true
+  exclude:
+    - '*.min.css'
+neat_js:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - '*.min.js'
+
